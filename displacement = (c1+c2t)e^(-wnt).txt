@@ -1,0 +1,21 @@
+import math as m
+x=0
+t=0
+c_1=float(input("enter value of c1"))
+c_2=float(input("enter value of c2"))
+w=float(input("enter value of wn"))
+q=float(input("enter value to slightly greater than x"))
+r=float(input("enter value slightly smaller than x"))
+y=float(input("enter value of x"))
+while(x!=y):
+    e=m.exp(-w*t)
+    x=(c_1+c_2*t)*e
+    if (q>=x>=r):
+        print("x is ",x,"t is ",t)
+        x=y
+    t+=0.0001
+for t in range(0,2):
+         e=m.exp(-w*t)
+         x=(c_1+c_2*t)*e
+         print("x is ",x,"t is ",t)
+
